@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gustavo Rojas Abogado | Mendoza</title>
 <meta name="description" content="Gustavo Andrés Rojas, Abogado en Mendoza. Accidentes de tránsito, laborales, sucesiones y divorcios. 10 años de experiencia. Estudio propio en el centro."/>
-<link rel="icon" type="image/svg+xml" href="./favicon.svg"/>
+<link rel="icon" type="image/png" href="./logo-fav-64.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -17,6 +17,9 @@ html{scroll-behavior:smooth}
   --bg-card:#141412;
   --bg-mid:#1a1917;
   --gold:#c6a560;
+  --gold-light:#f2ddab;
+  --gold-deep:#5f431f;
+  --gold-gradient:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-deep) 100%);
   --gold-dim:rgba(198,165,96,0.18);
   --gold-ultra:rgba(198,165,96,0.06);
   --white:#ffffff;
@@ -40,10 +43,10 @@ img{display:block;max-width:100%}
 section{padding:110px 0;position:relative}
 
 .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Funnel Sans',sans-serif;font-weight:700;font-size:.88rem;text-transform:uppercase;letter-spacing:.12em;border-radius:0;cursor:pointer;transition:all .25s ease;border:none;padding:16px 40px}
-.btn-gold{background:var(--gold);color:#080807}
+.btn-gold{background:var(--gold-gradient);color:#080807}
 .btn-gold:hover{filter:brightness(1.1);transform:translateY(-2px)}
 .btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold);padding:14px 36px}
-.btn-outline:hover{background:var(--gold);color:#080807}
+.btn-outline:hover{background:var(--gold-gradient);color:#080807}
 
 /* grain */
 .grain{position:relative}
@@ -98,7 +101,7 @@ nav.desk a:hover{color:var(--gold)}
 .hero-inner{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:0 2rem;width:100%;display:grid;grid-template-columns:60% 40%;align-items:center;gap:4rem}
 .hero-bar{width:40px;height:2px;background:var(--gold);margin:1rem 0 1.6rem}
 .hero-h1{font-family:'Funnel Display',sans-serif;font-weight:800;font-size:clamp(2.0rem,3.2vw,3.5rem);text-transform:uppercase;line-height:.90;margin-bottom:1.8rem}
-.hero-h1 .line-gold{color:var(--gold)}
+.hero-h1 .line-gold{background:var(--gold-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .hero-h1 .line-white{color:var(--text-main)}
 .hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.4rem}
 .chip{font-family:'Funnel Sans',sans-serif;font-weight:600;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--rule);color:var(--gold);padding:6px 14px;border-radius:2px}
@@ -124,17 +127,21 @@ nav.desk a:hover{color:var(--gold)}
 .sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 .sobre-eyebrow{margin-bottom:.6rem}
 .sobre-h2{font-family:'Funnel Display',sans-serif;font-weight:700;font-size:clamp(2rem,4vw,3.2rem);text-transform:uppercase;line-height:1.0;margin-bottom:1.2rem}
-.sobre-h2 em{font-style:normal;color:var(--gold)}
+.sobre-h2 em{font-style:normal;background:var(--gold-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .sobre-bar{width:60px;height:2px;background:var(--gold);margin:1.2rem 0 1.6rem}
 .sobre-p{color:var(--text-dim);line-height:1.72;margin-bottom:2rem;font-size:.95rem}
 .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:1.5rem 0}
 .stat-item{text-align:center}
-.stat-num{font-family:'Funnel Display',sans-serif;font-weight:800;font-size:clamp(2.4rem,4vw,3.6rem);color:var(--gold);line-height:1;display:block}
+.stat-num{font-family:'Funnel Display',sans-serif;font-weight:800;font-size:clamp(2.4rem,4vw,3.6rem);background:var(--gold-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;line-height:1;display:block}
 .stat-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.18em;color:var(--text-muted);margin-top:.3rem;display:block}
 .sobre-card{background:var(--bg-card);border:1px solid var(--gold-dim);padding:3rem;text-align:center}
 .sobre-card img{height:180px;width:auto;margin:0 auto 1.5rem}
 .sobre-card-name{font-family:'Funnel Display',sans-serif;font-weight:500;font-size:1.2rem;color:var(--text-main);margin-bottom:.4rem}
 .sobre-card-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.22em;color:var(--gold)}
+.cred-box{display:flex;align-items:flex-start;gap:.9rem;background:var(--bg-card);border:1px solid var(--gold-dim);padding:1.1rem 1.3rem;margin-bottom:1.8rem}
+.cred-box i{color:var(--gold);font-size:1.4rem;flex-shrink:0;margin-top:.15rem}
+.cred-box p{font-size:.8rem;color:var(--text-dim);line-height:1.55}
+.cred-box strong{color:var(--text-main);font-weight:600;display:block;margin-bottom:.15rem}
 
 /* ── PROCESO ── */
 #proceso{background:var(--bg-mid)}
@@ -163,7 +170,7 @@ nav.desk a:hover{color:var(--gold)}
 .contacto-bg-logo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:500px;width:auto;opacity:.03;z-index:0;pointer-events:none}
 .contacto-head{text-align:center;max-width:600px;margin:0 auto 3.5rem}
 .contacto-h2{font-family:'Funnel Display',sans-serif;font-weight:800;font-size:clamp(2.8rem,6vw,5rem);text-transform:uppercase;line-height:.95;margin-bottom:1rem}
-.contacto-h2 em{font-style:normal;color:var(--gold)}
+.contacto-h2 em{font-style:normal;background:var(--gold-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .contacto-p{color:var(--text-dim);font-size:1rem}
 .contacto-body{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
 /* Form */
@@ -202,7 +209,7 @@ footer{background:var(--bg-deep);border-top:1px solid var(--rule);padding:4rem 0
 /* ── FLOATING BUTTONS ── */
 .float-wa{position:fixed;bottom:24px;right:24px;z-index:90;width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fff;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:transform .25s,opacity .35s;opacity:0;pointer-events:none}
 .float-wa:hover{transform:scale(1.1)}
-.float-top{position:fixed;bottom:88px;right:24px;z-index:90;width:54px;height:54px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#080807;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(198,165,96,.25);transition:transform .25s,opacity .35s;opacity:0;pointer-events:none}
+.float-top{position:fixed;bottom:88px;right:24px;z-index:90;width:54px;height:54px;background:var(--gold-gradient);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#080807;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(198,165,96,.25);transition:transform .25s,opacity .35s;opacity:0;pointer-events:none}
 .float-top:hover{transform:scale(1.1)}
 .float-wa.visible,.float-top.visible{opacity:1;pointer-events:auto}
 
@@ -380,7 +387,7 @@ footer{background:var(--bg-deep);border-top:1px solid var(--rule);padding:4rem 0
         <p class="eyebrow sobre-eyebrow">Gustavo Andrés Rojas</p>
         <h2 class="sobre-h2">UN ABOGADO QUE <em>ENTIENDE</em> TU REALIDAD.</h2>
         <div class="sobre-bar"></div>
-        <p class="sobre-p">Con más de 10 años en ejercicio profesional y estudio propio en el centro de Mendoza, represento a personas —no a empresas— en los momentos más difíciles. Cada caso es único. Cada cliente, también.</p>
+        <p class="sobre-p">Con más de 10 años en ejercicio profesional y estudio propio en el centro de Mendoza, represento a personas en los momentos más difíciles, con foco en la negociación y el reclamo directo ante compañías de seguros. Cada caso es único. Cada cliente, también.</p>
         <div class="stats-row">
           <div class="stat-item">
             <span class="stat-num" data-target="10" data-suffix="+">10+</span>
@@ -396,6 +403,10 @@ footer{background:var(--bg-deep);border-top:1px solid var(--rule);padding:4rem 0
           </div>
         </div>
         <small style="display:block;color:var(--text-muted);font-size:.65rem;margin-bottom:1.8rem">* Estimado</small>
+        <div class="cred-box">
+          <i class="ph ph-seal-check"></i>
+          <p><strong>Certificado en Gestión de Siniestros en el Sector Asegurador</strong>Asociación Argentina de Liquidadores y Peritos de Seguros · 2025</p>
+        </div>
         <a href="https://wa.me/5492615516909" target="_blank" class="btn btn-outline">
           Escribime por WhatsApp
         </a>
